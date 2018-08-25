@@ -1,0 +1,10 @@
+version: '2.3'
+services:
+  notebook:
+    build: ./jupyter-gpu
+    runtime: nvidia
+    ports:
+      - '8888:8888'
+      - '6006:6006'
+    volumes:
+      - './:/notebooks'
